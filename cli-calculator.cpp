@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cctype>
 
 int main() {
   int x, y;
@@ -10,6 +11,7 @@ int main() {
   std::cout << "******Choose an operation******\n" << std::endl;
   std::cout << "( s = +, l = -, m = *, d = /, p = % )\n";
   std::cin >> choose;
+  choose[0] = tolower(choose[0]); 
 
   if (choose[0] == 's') {
     std::cout << "********Addition selected********\n" << std::endl;
