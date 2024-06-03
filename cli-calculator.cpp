@@ -47,8 +47,12 @@ int main() {
 
     std::cout << "Enter the divisor\n";
     std::cin >> b;
-    float result = (a) / b;
-    std::cout << "The result is: " << result;
+       if (b == 0) {
+        std::cout << "Error: Division by zero!\n";
+    } else {
+        float result = a / b;
+        std::cout << "The result is: " << result;
+    }
   } else if (choose[0] == 'p') {
     std::cout << "********Percentage selected********\n" << std::endl;
     std::cout << "A % B\n\n";
