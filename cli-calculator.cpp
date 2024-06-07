@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cctype>
 
+
 int main() {
   int x, y;
   float a;
@@ -84,23 +85,30 @@ int main() {
     std::cout << "********Circumference selected********\n" << std::endl;
     char selection[1];
 
+    bool validSelection = false;
+    while(!validSelection){
     std::cout << "Select the value of PI\n" << "(1) 3 --- (2) 3.14 --- (3) 3.14159\n";
     std::cin >> selection;
 
     switch(selection[0]){
         case '1':
             pi = 3;
+            validSelection = true;
             break;
 
         case '2':
             pi = 3.14;
+            validSelection = true;
             break;
 
         case '3':
             pi = 3.14159;
+            validSelection = true;
             break;
         default:
-            std::cout << "Invalid, select (1), (2) or (3).\n";
+            system("clear");
+            std::cout << "Invalid, select (1), (2) or (3).\n\n";
+    } 
     }
 
     std::cout << "Set the value of Radius\n";
