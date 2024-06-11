@@ -3,6 +3,10 @@
 
 
 int main() {
+  using std::cout;
+  using std::cin;
+  
+
   int x, y;
   float a;
   float b;
@@ -13,87 +17,87 @@ int main() {
 
   char choose[1];
 
-  std::cout << "******Choose an operation******\n" << std::endl;
-  std::cout << "( s = +, l = -, m = *, d = /, p = %, c = Circumference )\n";
-  std::cin >> choose;
+  cout << "******Choose an operation******\n" << std::endl;
+  cout << "( s = +, l = -, m = *, d = /, p = %, c = Circumference )\n";
+  cin >> choose;
   choose[0] = tolower(choose[0]); 
 
   switch(choose[0]){
     case 's':
       system("clear");
-      std::cout << "********Addition selected********\n" << std::endl;
-      std::cout << "Enter the first value\n";
-      std::cin >> x;
+      cout << "********Addition selected********\n" << std::endl;
+      cout << "Enter the first value\n";
+      cin >> x;
 
-      std::cout << "Enter the second value\n";
-      std::cin >> y;
+      cout << "Enter the second value\n";
+      cin >> y;
 
-      std::cout << "The result is: " << x + y;
+      cout << "The result is: " << x + y;
     break;
 
     case 'l':
       system("clear");
-      std::cout << "********Subtraction selected********\n" << std::endl;
-      std::cout << "Enter the first value\n";
-      std::cin >> x;
+      cout << "********Subtraction selected********\n" << std::endl;
+      cout << "Enter the first value\n";
+      cin >> x;
 
-      std::cout << "Enter the second value\n";
-      std::cin >> y;
+      cout << "Enter the second value\n";
+      cin >> y;
 
-      std::cout << "The result is: " << x - y;
+      cout << "The result is: " << x - y;
     break;
     
     case 'm':
       system("clear");
-      std::cout << "********Multiplication selected********\n" << std::endl;
-      std::cout << "Enter the first value\n";
-      std::cin >> x;
+      cout << "********Multiplication selected********\n" << std::endl;
+      cout << "Enter the first value\n";
+      cin >> x;
 
-      std::cout << "Enter the second value\n";
-      std::cin >> y;
+      cout << "Enter the second value\n";
+      cin >> y;
 
-      std::cout << "The result is: " << x * y;
+      cout << "The result is: " << x * y;
     break;
 
     case 'd':
       system("clear");
-      std::cout << "********Division selected********\n" << std::endl;
-      std::cout << "Enter the dividend\n";
-      std::cin >> a;
+      cout << "********Division selected********\n" << std::endl;
+      cout << "Enter the dividend\n";
+      cin >> a;
 
-      std::cout << "Enter the divisor\n";
-      std::cin >> b;
+      cout << "Enter the divisor\n";
+      cin >> b;
         if (b == 0) {
-          std::cout << "Error: Division by zero!\n";
+          cout << "Error: Division by zero!\n";
       } else {
           float result = a / b;
-          std::cout << "The result is: " << result;
+          cout << "The result is: " << result;
       }
     break;
 
     case 'p':
       system("clear");
-      std::cout << "********Percentage selected********\n" << std::endl;
-      std::cout << "A % B\n\n";
-      std::cout << "Enter the \"A\" value\n";
-      std::cin >> a;
+      cout << "********Percentage selected********\n" << std::endl;
+      cout << "A % B\n\n";
+      cout << "Enter the \"A\" value\n";
+      cin >> a;
 
-      std::cout << "Enter the \"B\" value\n";
-      std::cin >> b;
+      cout << "Enter the \"B\" value\n";
+      cin >> b;
 
       percentage = b / 100;
-      std::cout << a * percentage;
+      cout << a * percentage;
     break;
 
     case 'c':
       system("clear");
-      std::cout << "********Circumference selected********\n" << std::endl;
+      cout << "********Circumference selected********\n" << std::endl;
       char selection[1];
 
       bool validSelection = false;
       while(!validSelection){
-      std::cout << "Select the value of PI\n" << "(1) 3 --- (2) 3.14 --- (3) 3.14159\n";
-      std::cin >> selection;
+      cout << "Select the value of PI\n" << "(1) 3 --- (2) 3.14 --- (3) 3.14159\n";
+      cin >> selection;
 
       switch(selection[0]){
           case '1':
@@ -112,15 +116,15 @@ int main() {
               break;
           default:
               system("clear");
-              std::cout << "Invalid, select (1), (2) or (3).\n\n";
+              cout << "Invalid, select (1), (2) or (3).\n\n";
       } 
       }
 
-      std::cout << "Set the value of Radius\n";
-      std::cin >> radius;
+      cout << "Set the value of Radius\n";
+      cin >> radius;
 
       circumference = 2 * pi * radius;
-      std::cout << "The result of the circumference is: " << circumference;
+      cout << "The result of the circumference is: " << circumference;
     break;
   }
   
