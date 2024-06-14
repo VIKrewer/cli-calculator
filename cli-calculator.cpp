@@ -152,12 +152,12 @@ int main(){
             switch(userUnit) {
                 case 'f': {
                     temp = getTemperature();
-                    cout << "The temperature in Celsius is: " << (temp - 32) * 5 / 9;
+                    cout << "The temperature in Celsius is: " << (temp - 32) * 5 / 9 << "F°";
                 } break;
 
                 case 'c': {
                     temp = getTemperature();
-                    cout << "The temperature in Fahrenheit is: " << temp * 1.8 + 32;
+                    cout << "The temperature in Fahrenheit is: " << temp * 1.8 + 32 << "C°";
                 } break;
             }
             break;
