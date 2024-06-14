@@ -20,10 +20,10 @@ int getTemperature() {
 int main(){
 
     int x, y;
-    float a;
-    float b;
-    float percentage;
-    float pi;
+    double a;
+    double b;
+    double percentage;
+    double pi;
     double radius;
     double circumference;
     double temp;
@@ -89,7 +89,7 @@ int main(){
             if (b == 0) {
                 cout << "Error: Division by zero!\n";
             } else {
-                float result = a / b;
+                double result = a / b;
                 cout << "The result is: " << result;
             }
             break;
