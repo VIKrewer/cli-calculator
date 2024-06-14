@@ -8,6 +8,7 @@ using std::cin;
 
 int getTemperature() {
     double temp;
+    cout << "Enter the Temperature: ";
     while (!(cin >> temp)) {
         cout << "Invalid input. Please enter a temperature: ";
         cin.clear();
@@ -144,7 +145,8 @@ int main(){
             break;
 
         case 't':
-            cout << "Enter unit (F/C): ";
+            cout << "********Temperature Conversion********" << std::endl;
+            cout << "Enter unit (F°/C°): ";
             cin >> userUnit;
 
             switch(userUnit) {
